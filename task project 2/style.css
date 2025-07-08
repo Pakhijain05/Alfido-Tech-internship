@@ -1,0 +1,41 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.custom-navbar {
+  background-color: #31706d;
+}
+
+.custom-navbar .nav-link {
+  color: #fff;
+  font-weight: 600;
+}
+
+.custom-navbar .nav-link:hover,
+.custom-navbar .nav-link.active {
+  color: #ffc107;
+}
+
+.hero-banner img,
+.info-banner img,
+.menu-banner img,
+.menu-list-section img {
+  width: 100%;
+  height: auto;
+}
+
+.text-orange {
+  color: #e65100;
+}
+
+.about-us-section {
+  background-color: #fceee0;
+  padding: 40px 20px;
+  line-height: 1.8;
+}
+
+.about-us-section p {
+  max-width: 900px;
+  margin: 0 auto 15px;
+  font-size: 1.1rem;
+}

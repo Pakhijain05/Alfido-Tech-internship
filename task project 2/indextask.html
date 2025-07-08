@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hamburger</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-dark custom-navbar">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Hamburger</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link active" href="#">HOME</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">ABOUT US</a></li>
+          <li class="nav-item"><a class="nav-link" href="#" onclick="showMenuSection()">MENU</a></li>
+          <li class="nav-item"><a class="nav-link" href="gallery.html">GALLERY</a></li>
+        </ul>
+        <a href="#" class="btn btn-warning ms-3">Order Online</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Banner -->
+  <section class="hero-banner">
+    <img src="burger.png" alt="Veg Surprise Burger" class="img-fluid w-100">
+  </section>
+
+  <!-- Info Banner -->
+  <section class="info-banner">
+    <img src="2img.png" alt="Burger Info" class="img-fluid w-100">
+  </section>
+
+
+  <!-- Hidden Menu Section -->
+  <section id="menu-section" class="menu-list-section" style="display: none;">
+    <img src="menu.png" alt="Burger Menu List" class="img-fluid w-100">
+  </section>
+
+  <!-- About Us Section -->
+  <section id="about" class="about-us-section">
+    <div class="container py-5">
+      <h2 class="text-center text-orange fw-bold">Who I Am?</h2>
+      <h3 class="text-center fw-bold">Pakhi Jain</h3>
+      <p class="lead text-center mt-3 fw-semibold">
+        What happens when a passionate dreamer takes the first bite into entrepreneurship?  
+        A proudly homegrown, pure vegetarian burger revolution begins.
+      </p>
+      <p>
+        Pakhi Jain founded Hamburger in January 2025 with a bold vision — to build India's first fast-growing, pure vegetarian burger brand. In a market filled with non-veg burger chains, Hamburger stands out by offering 100% veg fusion burgers crafted specially for the Indian palate.
+      </p>
+      <p>
+        Our journey began with a small outlet in Agra, and with the love and support of our customers, Hamburger quickly grew into one of India's fastest-expanding veg QSR (Quick Service Restaurant) chains. Today, we serve delicious, innovative burgers like Mint Masala Mayo, Paneer Achari Crunch, Tandoori Tikki, and Spicy Garlic Makhani — all completely vegetarian and full of flavor.
+      </p>
+      <p>
+        What started as one outlet has grown to more than 50+ locations across 25+ cities, including:  
+        Delhi, Mumbai, Bengaluru, Pune, Jaipur, Ahmedabad, Lucknow, Chandigarh, Bhopal, Indore, Surat, Varanasi, Patna, Ranchi, Guwahati, Kochi, Bhubaneswar, Jammu, Dehradun, Raipur, and many more.
+      </p>
+      <p>
+        At Hamburger, we don't just serve food — we serve trust, purity, and taste. Our vision is to make pure veg burgers easily accessible, enjoyable, and proudly Indian.
+      </p>
+    </div>
+  </section>
+
+  <!-- Bootstrap & Script -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    function showMenuSection() {
+      const menuSection = document.getElementById("menu-section");
+      menuSection.style.display = "block";
+      menuSection.scrollIntoView({ behavior: "smooth" });
+    }
+  </script>
+</body>
+</html>
