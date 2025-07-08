@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>To-Do List</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <img src="https://img.icons8.com/color/96/000000/todo-list--v2.png" alt="Logo">
+      <h1>To-Do List</h1>
+    </div>
+    <div style="width:100%;margin-bottom:1rem;">
+      <label for="day-picker" style="font-weight:600;color:#5a5a89;">Select Day:</label>
+      <input type="date" id="day-picker" style="width:100%;margin-top:0.3rem;" />
+    </div>
+    <div class="stats">
+      Tasks: <span id="total">0</span> |
+      Completed: <span id="done">0</span> |
+      Progress: <span id="percent">0%</span>
+    </div>
+    <div class="progress-bar">
+      <div class="progress" id="progress-bar" style="width: 0%"></div>
+    </div>
+    <input type="text" id="title" placeholder="Task title..." />
+    <input type="time" id="task-time" />
+    <select id="category">
+      <option value="" disabled selected>Choose Category</option>
+      <option>Work</option>
+      <option>Home</option>
+      <option>Personal</option>
+    </select>
+    <input type="text" id="new-category" placeholder="Add new category..." style="margin-bottom:0.5rem;" />
+    <button id="add-category" class="add-btn" style="margin-bottom:1.5rem;">Add Category</button>
+    <button id="add" class="add-btn">Add Task</button>
+    <button id="clear" class="clear-btn">Clear All</button>
+    <div class="task-list">
+      <ul id="list"></ul>
+    </div>
+    <audio id="reminder-sound" src="https://cdn.pixabay.com/audio/2022/07/26/audio_124bfae0b2.mp3"></audio>
+  </div>
+  <script src="javafile.js"></script>
+</body>
+</html>
