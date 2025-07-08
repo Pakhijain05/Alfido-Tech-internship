@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Interactive Page</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background: #f0f0f0;
+      transition: background-color 0.3s ease;
+      font-family: sans-serif;
+    }
+    h1 {
+      font-size: 3rem;
+      color: #333;
+      margin-bottom: 2rem;
+      transition: color 0.3s, transform 0.3s;
+      cursor: pointer;
+    }
+    button {
+      padding: 1em 2em;
+      font-size: 1.2rem;
+      color: #fff;
+      background: linear-gradient(45deg, #ff6ec4, #7873f5, #42e695);
+      background-size: 300% 300%;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: transform 0.2s ease, box-shadow 0.3s;
+      animation: gradientShift 5s infinite ease alternate;
+      box-shadow: 0 4px 15px rgba(66, 230, 149, 0.4);
+    }
+    @keyframes gradientShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 30px rgba(255, 110, 196, 0.6);
+    }
+    button:active {
+      transform: scale(0.98);
+      box-shadow: 0 4px 20px rgba(120, 115, 245, 0.8);
+    }
+  </style>
+</head>
+<body>
+  <h1 id="title">Hover or Click the Heading</h1>
+  <button id="color-btn">Change Background Color</button>
+
+  <script>
+    // Random color generators
+    function getRandomRGB() {
+      const r = Math.floor(Math.random() * 256);
+      const g = Math.floor(Math.random() * 256);
+      const b = Math.floor(Math.random() * 256);
+      return `rgb(${r}, ${g}, ${b})`;
+    }
+
+    function getRandomHex() {
+      return '#' + Math.floor(Math.random() * 16777215)
+                       .toString(16)
+                       .padStart(6, '0');
+    }
+
+    // Button event: change body background
+    const btn = document.getElementById('color-btn');
+    btn.addEventListener('click', () => {
+      const newColor = getRandomHex();
+      document.body.style.backgroundColor = newColor;
+    });
+
+    // Heading events: hover & click
+    const title = document.getElementById('title');
+    title.addEventListener('mouseenter', () => {
+      title.style.transform = 'scale(1.1)';
+    });
+    title.addEventListener('mouseleave', () => {
+      title.style.transform = 'scale(1)';
+      title.style.color = '#333';
+    });
+    title.addEventListener('click', () => {
+      const newColor = getRandomRGB();
+      title.style.color = newColor;
+      console.log('Heading clicked, new color:', newColor);
+    });
+  </script>
+</body>
+</html>
